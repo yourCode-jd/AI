@@ -11,25 +11,136 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Rajdhani -->
+    <!-- Google Fonts: DM / monospace -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>AI</title>
 </head>
 
 <body class="font-rajdhani">
 
+    <!-- Cursor -->
+
+    <div id="customCursor"
+        class="fixed top-0 left-0 w-8 h-8 rounded-full bg-[#7A73D1] pointer-events-none z-50 transition-all duration-200 ease-out mix-blend-multiply text-white text-[10px] flex items-center justify-center">
+        <span id="cursorText"></span>
+    </div>
+
+
+    <!-- Main -->
+    <div
+        class="max-w-screen-2xl mx-auto w-full bg-[#F2F1F8] bg-opacity-60 backdrop-blur-sm border-8 border-white mt-10">
+        <!-- Header -->
+        <header class="p-0 fixed top-0 left-0 w-full z-10">
+            <div class="px-5 md:px-8 lg:px-12">
+
+                <!-- Navigation -->
+                <nav class="relative flex items-center justify-between py-5 left-0 w-full">
+                    <!-- Logo -->
+                    <a href="/index.html"
+                        class=" logo text-4xl font-bold uppercase cursor-pointer text-[#252834]">JD</a>
+                    <!-- Hamburger -->
+                    <div id="Hamburger" class="w-10 h-auto flex flex-col gap-2 cursor-pointer z-10"
+                        onclick="toggleHighlight()">
+                        <span class="w-full h-1 rounded bg-[#252834]"></span>
+                        <span class="w-full h-1 rounded bg-[#252834]"></span>
+                        <span class="w-full h-1 rounded bg-[#252834]"></span>
+                    </div>
+                    <!-- Menu -->
+                    <div id="slideNavigation" class="flex items-center gap-6 relative">
+                        <!-- <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-[-1]">
+                        <source src="/assets/images/menuVideo3.mp4" type="video/mp4" />
+                    </video> -->
+                        <a href="/index.html"
+                            class="text-white hover:text-black text-8xl font-bold uppercase transition-all">Home</a>
+                        <a href="./about.html"
+                            class="text-white hover:text-black text-8xl font-bold uppercase transition-all">About</a>
+                        <a href="./contact.html"
+                            class="text-white hover:text-black text-8xl font-bold uppercase transition-all ">Contact</a>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+        <section class="flex items-center justify-center h-[90vh]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr_1fr] h-full">
+                <!-- left -->
+                <div
+                    class="left-section border-r border-gray-300 h-full w-full py-40 px-5 md:px-8 lg:px-12 relative flex flex-col">
+                    <div class="">
+                        <h1 class="hero-heading text-xl font-semibold text-[#252834] mb-4">Empowering the Future with
+                            Smarter AI
+                        </h1>
+                        <p class="hero-paragraph text-sm text-[#252834] text-medium">Build, scale, and automate with
+                            intelligent
+                            solutions designed for real-world impact. Our AI systems are crafted to streamline complex
+                            workflows, enhance decision-making, and drive measurable results.</p>
+                    </div>
+
+                    <!-- banner-circle -->
+                    <div class="banner-circle-outer flex items-center justify-center mt-auto">
+                        <div class="relative w-48 h-48 rounded-full flex items-center justify-center">
+
+                            <!-- ✨ Glowing ring -->
+                            <div class="glow-ring absolute inset-0 -z-10 rounded-full"></div>
+
+                            <!-- 🖼️ Image circle -->
+                            <div class="banner-circle w-full h-full rounded-full">
+                                <img src="/assets/images/hero2.png" alt="AI" class="w-full h-full object-cover">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- center -->
+                <div class=" center-section flex items-center justify-center relative">
+                    <div class="glow-ring-bg absolute inset-0 m-auto -z-10 rounded-full"></div>
+                    <div class="p-4">
+                        <img src="/assets/images/hero2.png" alt="AI" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- right -->
+                <div class="border-l border-gray-300 h-full w-full py-40 px-5 md:px-8 lg:px-12 relative">
+                    <ul class="flex flex-col gap-10">
+                        <li class="feature-item  border-gray-300 border p-4">
+                            <h2 class="text-base font-semibold ">
+                                Natural Language
+                                Understanding</h2>
+                            <p class="text-sm font-medium">Understand and respond to human input with
+                                context-aware
+                                precision.</p>
+                        </li>
+                        <li class="feature-item border-gray-300 border p-4">
+                            <h2 class="text-base font-semibold ">
+                                Real-Time Processing</h2>
+                            <p class="text-sm font-medium">Fast and efficient AI inference for instant
+                                results.</p>
+                        </li>
+                        <li class="feature-item border-gray-300 border p-4">
+                            <h2 class="text-base font-semibold ">
+                                Scalable Infrastructure
+                            </h2>
+                            <p class="text-sm font-medium">Handle everything from prototypes to
+                                production-scale
+                                deployments effortlessly.</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script> -->
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
-    <script src="custom.js"></script>
+    <script src="/custom.js"></script>
 </body>
 
 </html>

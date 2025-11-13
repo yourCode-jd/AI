@@ -34,7 +34,7 @@
 
     <!-- Main -->
     <div
-        class="max-w-screen-2xl mx-auto w-full bg-[#F2F1F8] bg-opacity-40 backdrop-blur-sm border-8 border-white my-10">
+        class="max-w-screen-2xl mx-auto w-full bg-[#F2F1F8] bg-opacity-40 backdrop-blur-sm border-8 border-white md:my-10">
         <!-- Header -->
         <header class="p-0 fixed top-0 left-0 w-full z-10">
             <div class="px-5 md:px-8 lg:px-12">
@@ -66,11 +66,11 @@
         </header>
 
         <!-- Hero section -->
-        <section class="flex items-center justify-center h-[100vh]">
+        <section class="flex items-center justify-center md:h-[100vh] h-full">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr_1fr] h-full">
                 <!-- left -->
                 <div
-                    class="left-section border-r border-[#b166c5]/10 h-full w-full py-40 px-5 md:px-8 lg:px-12 relative flex flex-col">
+                    class="left-section border-r border-[#b166c5]/10 h-full w-full py-28 pb-5 md:py-40 px-5 md:px-8 lg:px-12 relative flex md:flex-col gap-10 md:gap-0 flex-col-reverse">
                     <div class="">
                         <h1 class="hero-heading text-xl font-semibold text-black mb-4">Empowering the Future with
                             Smarter AI
@@ -82,7 +82,7 @@
                     </div>
 
                     <!-- banner-circle -->
-                    <div class="banner-circle-outer flex items-center justify-center mt-auto">
+                    <div class="banner-circle-outer md:flex items-center justify-center mt-auto hidden">
                         <div class="relative w-48 h-48 rounded-full flex items-center justify-center">
 
                             <!-- ✨ Glowing ring -->
@@ -105,8 +105,9 @@
                     </div>
                 </div>
                 <!-- right -->
-                <div class="border-l border-[#b166c5]/10 h-full w-full py-40 px-5 md:px-8 lg:px-12 relative">
-                    <ul class="flex flex-col gap-10">
+                <div
+                    class="border-l border-[#b166c5]/10 h-full w-full md:py-40 pb-4 py-20 px-5 md:px-8 lg:px-12 relative">
+                    <ul class="flex flex-col md:gap-10 gap-5">
                         <li class="feature-item  border-[#b166c5]/10 border p-4">
                             <h2 class="text-base text-black font-semibold ">
                                 Natural Language
@@ -136,7 +137,7 @@
         </section>
 
         <!-- why choose us -->
-        <section id="why-choose" class="py-20 h-[100vh]">
+        <section id="why-choose" class="pt-0 pb-10 md:py-20 h-full md:h-[100vh]">
             <div class="max-w-screen-xl mx-auto px-6 lg:px-10">
                 <!-- Heading -->
                 <div class="text-center my-16">
@@ -229,7 +230,7 @@
         </section>
 
         <!-- How it works -->
-        <section class="py-24 ">
+        <section class="md:py-24 py-10 ">
             <div class="max-w-5xl mx-auto px-4">
                 <!-- Heading -->
                 <div class="timeline-header text-center mb-20">
@@ -241,7 +242,7 @@
                 </div>
 
                 <!-- Timeline -->
-                <div class="relative border-l border-[#5c2c71] pl-6 space-y-16">
+                <div class="relative border-l border-[#5c2c71] pl-6 md:space-y-16 space-y-8">
                     <!-- Step 1 -->
                     <div class="relative timeline-step">
                         <div
@@ -282,8 +283,8 @@
         </section>
 
         <!-- use cases -->
-        <section class="py-24 text-white overflow-hidden">
-            <div class="max-w-6xl mx-auto px-6 space-y-24">
+        <section class="md:py-24 py-10 text-white overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 md:space-y-24 space-y-12">
 
                 <!-- Row 1 -->
                 <div class="flex flex-col lg:flex-row items-center gap-10 capability-row">

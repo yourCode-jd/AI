@@ -99,6 +99,11 @@ h3 span::after {
     width: 700px;
     height: 700px;
     opacity: 0.5;
+
+    @media screen and (max-width: 768px) {
+        width: 400px;
+        height: 400px;
+    }
 }
 
 @keyframes spinGlow {

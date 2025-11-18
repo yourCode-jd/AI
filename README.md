@@ -7,7 +7,7 @@ A sleek AI landing page that highlights why choose AI and how it works with smoo
 
 ## 🚀 Github Demo
 
-[View Here](https://yourcode-jd.github.io/AI/)
+[View Here](https://yourcode-jd.github.io/Aivora/)
 
 ---
 
